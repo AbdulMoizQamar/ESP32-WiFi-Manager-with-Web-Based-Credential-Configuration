@@ -1,24 +1,32 @@
-# ESP32-WiFi-Manager-with-Web-Based-Credential-Configuration
-This project implements a WiFi Manager for the ESP32 using Access Point (AP) mode and an embedded HTTP server. 
+# _Sample project_
 
-📝 Description:
-This project implements a WiFi Manager for the ESP32 using Access Point (AP) mode and an embedded HTTP server. When the device starts, it:
-Creates a WiFi Access Point (ESP32_Config)
-Hosts a web page at 192.168.4.1 to enter SSID and Password
-Receives credentials via a POST request
-Connects to the specified WiFi network
-Uses Non-Volatile Storage (NVS) to retain WiFi credentials after reboot
+(See the README.md file in the upper level 'examples' directory for more information about examples.)
 
-✅ Features:
-SoftAP mode for initial configuration
-HTML form for entering WiFi credentials
-Handles HTTP GET and POST requests
-Logs SSID and password for debugging
-Connects to STA mode after receiving credentials
-Easy way to update credentials without re-flashing
+This is the simplest buildable example. The example is used by command `idf.py create-project`
+that copies the project to user specified path and set it's name. For more information follow the [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project)
 
-📦 Requirements:
-ESP32 board
-ESP-IDF development environment (or PlatformIO)
-WiFi connection
-Serial Monitor for debug logs
+
+
+## How to use example
+We encourage the users to use the example as a template for the new projects.
+A recommended way is to follow the instructions on a [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project).
+
+## Example folder contents
+
+The project **sample_project** contains one source file in C language [main.c](main/main.c). The file is located in folder [main](main).
+
+ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt`
+files that provide set of directives and instructions describing the project's source files and targets
+(executable, library, or both). 
+
+Below is short explanation of remaining files in the project folder.
+
+```
+├── CMakeLists.txt
+├── main
+│   ├── CMakeLists.txt
+│   └── main.c
+└── README.md                  This is the file you are currently reading
+```
+Additionally, the sample project contains Makefile and component.mk files, used for the legacy Make based build system. 
+They are not used or needed when building with CMake and idf.py.
